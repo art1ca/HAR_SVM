@@ -30,7 +30,7 @@ def main():
     X_test_array = sc.transform(X_test.values)
     X_test = pd.DataFrame(X_test_array, index=X_test.index, columns=X_test.columns)
     
-    clf=SVC(kernel='poly').fit(X_train,y_train)
+    clf=SVC(kernel='rbf').fit(X_train,y_train)
     print(clf.score(X_test,y_test))
     
 if __name__=="__main__":
