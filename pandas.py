@@ -9,4 +9,4 @@ import pandas as pd
 
 df= pd.DataFrame({'animal': ['alligator', 'bee', 'falcon', 'lion',
                    'monkey', 'parrot', 'shark', 'whale', 'zebra']})
-df
+print(df.tail())
