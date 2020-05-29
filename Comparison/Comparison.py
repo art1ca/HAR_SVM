@@ -11,10 +11,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
-from sklearn.ensemble import BaggingClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.ensemble import GradientBoostingClassifier
  
 # load a single file as a numpy array
 def load_file(filepath):
@@ -46,14 +42,9 @@ def load_dataset(prefix=''):
 def define_models(models=dict()):
 	# nonlinear models
 	models['knn'] = KNeighborsClassifier(n_neighbors=7)
-	models['cart'] = DecisionTreeClassifier()
+	models['dtree'] = DecisionTreeClassifier()
 	models['svm'] = SVC()
 	models['bayes'] = GaussianNB()
-	# ensemble models
-	models['bag'] = BaggingClassifier(n_estimators=100)
-	models['rf'] = RandomForestClassifier(n_estimators=100)
-	models['et'] = ExtraTreesClassifier(n_estimators=100)
-	models['gbm'] = GradientBoostingClassifier(n_estimators=100)
 	print('Defined %d models' % len(models))
 	return models
  
