@@ -11,6 +11,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import RandomForestClassifier
  
 # load a single file as a numpy array
 def load_file(filepath):
