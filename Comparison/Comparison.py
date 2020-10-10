@@ -45,6 +45,7 @@ def define_models(models=dict()):
 	models['dtree'] = DecisionTreeClassifier()
 	models['svm'] = SVC()
 	models['bayes'] = GaussianNB()
+	models['rf'] = RandomForestClassifier(n_estimators=100)
 	print('Defined %d models' % len(models))
 	return models
  
